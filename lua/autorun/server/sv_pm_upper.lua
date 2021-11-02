@@ -4,6 +4,7 @@ net.Receive("PMUpper:SetModel", function(_, ply)
     ply.bAntiPMUpperSpam = ply.bAntiPMUpperSpam or 0
     if ply.bAntiPMUpperSpam > CurTime() then return end
     ply.bAntiPMUpperSpam = CurTime() + 1
+    if PMUpper.tGroupAccess and not PMUpper.tGroupAccess[ply:GetUserGroup()] then return end
     local sModel = net.ReadString()
 
     if not util.IsValidModel(sModel) then return end
