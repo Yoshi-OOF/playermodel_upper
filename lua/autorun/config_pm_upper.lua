@@ -13,14 +13,10 @@ PMUpper.iAllowRagdoll = true
 PMUpper.tGroupAccess = {}
 
 -- The copy to clipboard must contain (Default : PMUpper.MustContain = {})
--- To Disable :
+-- Ex : PMUpper.tMustContain = {
+--          ["player"] = true
+--      } 
 PMUpper.MustContain = {}
--- To Enable : 
---[[ 
-PMUpper.tMustContain = {
-    ["player"] = true
-} 
-]]
 
 PMUpper.tLang = {
     ["NotAccess"] = "Vous n'avez pas accés à ce menu",
