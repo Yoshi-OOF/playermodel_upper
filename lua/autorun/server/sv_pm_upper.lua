@@ -1,11 +1,11 @@
 util.AddNetworkString("PMUpper:SetModel")
 
 local function PMUpperNotify(ply, sMsg, iType)
-    if DarkRP then
+    --if DarkRP then
         DarkRP.notify(ply, iType, 2, sMsg)
-    else
+    --else
         ply:ChatPrint(sMsg)
-    end
+    ---end
 end
 
 net.Receive("PMUpper:SetModel", function(_, ply)
@@ -39,7 +39,7 @@ net.Receive("PMUpper:SetModel", function(_, ply)
         return
     end
 
-    if PMUpper.tMustContain then
+    if not table.IsEmpty(PMUpper.tMustContain) then
         for sKeyword, _ in pairs(PMUpper.tMustContain) do
             if not string.find(sModel, sKeyword) then
                 PMUpperNotify(ply, string.format(PMUpper.tLang["MustContain"], sKeyword), NOTIFY_ERROR)
