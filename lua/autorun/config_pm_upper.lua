@@ -27,6 +27,7 @@ PMUpper.tLang = {
     ["PropsNotAllowed"] = "Les props ne sont pas autorisés",
     ["RagdollNotAllowed"] = "Les ragdoll ne sont pas autorisés",
     ["MustContain"] = "Le model doit contenir : %s",
+    ["NotModel"] = "Le model n'est pas valide",
 }
 
 -- Touche to open the gui (Default : F2)

@@ -20,9 +20,24 @@ net.Receive("PMUpper:SetModel", function(_, ply)
     end
 
     local sModel = net.ReadString()
-    if not util.IsValidModel(sModel) then return end
-    if not PMUpper.iAllowProps and util.IsValidProp(sModel) then return end
-    if not PMUpper.iAllowRagdoll and util.IsValidRagdoll(sModel) then return end
+
+    if not util.IsValidModel(sModel) then
+        PMUpper:Notify(ply, PMUpper.tLang["NotModel"], NOTIFY_ERROR)
+
+        return
+    end
+
+    if not PMUpper.iAllowProps and util.IsValidProp(sModel) then
+        PMUpper:Notify(ply, PMUpper.tLang["PropsNotAllowed"], NOTIFY_ERROR)
+
+        return
+    end
+
+    if not PMUpper.iAllowRagdoll and util.IsValidRagdoll(sModel) then
+        PMUpper:Notify(ply, PMUpper.tLang["RagdollNotAllowed"], NOTIFY_ERROR)
+
+        return
+    end
 
     if PMUpper.tMustContain then
         for sKeyword, _ in pairs(PMUpper.tMustContain) do
