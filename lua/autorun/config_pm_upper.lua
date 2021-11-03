@@ -16,7 +16,7 @@ PMUpper.tGroupAccess = {}
 -- Ex : PMUpper.tMustContain = {
 --          ["player"] = true
 --      } 
-PMUpper.MustContain = {}
+PMUpper.tMustContain = {}
 
 PMUpper.tLang = {
     ["NotAccess"] = "Vous n'avez pas accés à ce menu",
