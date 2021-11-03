@@ -1,11 +1,11 @@
 util.AddNetworkString("PMUpper:SetModel")
 
 local function PMUpperNotify(ply, sMsg, iType)
-    --if DarkRP then
+    if DarkRP then
         DarkRP.notify(ply, iType, 2, sMsg)
-    --else
+    else
         ply:ChatPrint(sMsg)
-    ---end
+    end
 end
 
 net.Receive("PMUpper:SetModel", function(_, ply)
