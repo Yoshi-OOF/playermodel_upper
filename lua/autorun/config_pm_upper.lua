@@ -14,7 +14,7 @@ PMUpper.tGroupAccess = {}
 
 -- The copy to clipboard must contain (Default : PMUpper.MustContain = {})
 -- To Disable :
-PMUpper.MustContain = {}
+PMUpper.tMustContain = {}
 -- To Enable : 
 --[[ 
 PMUpper.tMustContain = {
