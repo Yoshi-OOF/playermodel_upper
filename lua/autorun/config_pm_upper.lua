@@ -22,6 +22,13 @@ PMUpper.tMustContain = {
 } 
 ]]
 
+PMUpper.tLang = {
+    ["NotAccess"] = "Vous n'avez pas accés à ce menu",
+    ["PropsNotAllowed"] = "Les props ne sont pas autorisés",
+    ["RagdollNotAllowed"] = "Les ragdoll ne sont pas autorisés",
+    ["MustContain"] = "Le model doit contenir : %s",
+}
+
 -- Touche to open the gui (Default : F2)
 if CLIENT then
     PMUpper.sKeyOpenGui = "F2"
