@@ -46,12 +46,7 @@ hook.Add("PlayerButtonDown", "PMUpper:Gui", function(ply, bKey)
         vValidateBtn:SetPos(w * .075, h * .13)
 
         function vValidateBtn:Paint(ww, hh)
-            if self:IsHovered() then
-                draw.RoundedBox(2, 0, 0, ww, hh, Color(0, 0, 0, 100))
-            else
-                draw.RoundedBox(2, 0, 0, ww, hh, Color(0, 0, 0, 200))
-            end
-
+            draw.RoundedBox(2, 0, 0, ww, hh, self:IsHovered() and Color(0, 0, 0, 100) or Color(0, 0, 0, 200))
             draw.SimpleText("Valider", "Trebuchet24", ww * .5, hh * .5, Color(255, 255, 255, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER)
         end
 
